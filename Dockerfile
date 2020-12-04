@@ -1,12 +1,10 @@
 FROM python:3.8-slim
 
-WORKDIR /code/srvHm
+ADD requirements.txt /code/srvHm/
 
-COPY requirements.txt .
+ADD src/ /code/srvHm/
 
 RUN pip install -r requirements.txt
-
-COPY src/ .
 
 EXPOSE 8000
 
