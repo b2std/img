@@ -14,4 +14,4 @@ RUN pip install -r /code/srvHm/requirements.txt
 
 EXPOSE 8000
 
-CMD ["python", "/code/srvHm/src/srvHm.py"]
+CMD ["python3", "/code/srvHm/src/srvHm.py"]
