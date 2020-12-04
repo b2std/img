@@ -4,7 +4,7 @@ ADD requirements.txt /code/srvHm/
 
 ADD src/ /code/srvHm/
 
-RUN pip install -r requirements.txt
+RUN pip install -r /code/srvHm/requirements.txt
 
 EXPOSE 8000
 
