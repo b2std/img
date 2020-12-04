@@ -1,13 +1,17 @@
 FROM alpine:latest
 
-#ADD requirements.txt /code/srvHm/
+RUN apk update
 
-#ADD src/ /code/srvHm/src/
+RUN apk add python3
 
-#RUN pip install -r /code/srvHm/requirements.txt
+RUN apk add py3-pip
 
-#EXPOSE 8000
+ADD requirements.txt /code/srvHm/
 
-#CMD ["python", "/code/srvHm/src/srvHm.py"]
+ADD src/ /code/srvHm/src/
 
-CMD ["/bin/sh"]
+RUN pip install -r /code/srvHm/requirements.txt
+
+EXPOSE 8000
+
+CMD ["python", "/code/srvHm/src/srvHm.py"]
