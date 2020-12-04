@@ -1,11 +1,13 @@
-FROM python:3.8-slim
+FROM alpine:latest
 
-ADD requirements.txt /code/srvHm/
+#ADD requirements.txt /code/srvHm/
 
-ADD src/ /code/srvHm/src/
+#ADD src/ /code/srvHm/src/
 
-RUN pip install -r /code/srvHm/requirements.txt
+#RUN pip install -r /code/srvHm/requirements.txt
 
-EXPOSE 8000
+#EXPOSE 8000
 
-CMD ["python", "/code/srvHm/src/srvHm.py"]
+#CMD ["python", "/code/srvHm/src/srvHm.py"]
+
+CMD ["/bin/sh"]
